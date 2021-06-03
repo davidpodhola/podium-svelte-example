@@ -6,10 +6,10 @@ Svelte docs: https://svelte.dev/tutorial/basics
 
 ## How to start  
 1. Clone this repository  
-2. In root folder run command "npm install"  
-3. In root folder run command "npm run installAll"   
-4. In root folder run command "npm start"  
-5. Open up your favorite browser and head to http://localhost:7000  
+2. In root folder run command `yarn`
+3. In root folder run command `yarn installAll`  
+4. In root folder run command `yarn start`  
+5. Open up your favorite browser and head to [http://localhost:7000](http://localhost:7000)  
 
 ## What is in this repo  
 A single page loads 2 Svelte Micro Frontends...  

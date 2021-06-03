@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "installAll": "(cd ./base-app && npm install) && (cd ./svelte-message-pod && npm install) && (cd ./svelte-receive-pod && npm install)",
-    "startMessagePod": "(cd ./svelte-message-pod && npm run build && node podlet.js)",
-    "startReceivePod": "(cd ./svelte-receive-pod && npm run build && node podlet.js)",
+    "installAll": "(cd ./base-app && yarn) && (cd ./svelte-message-pod && yarn) && (cd ./svelte-receive-pod && yarn)",
+    "startMessagePod": "(cd ./svelte-message-pod && yarn build && node podlet.js)",
+    "startReceivePod": "(cd ./svelte-receive-pod && yarn build && node podlet.js)",
     "startBaseApp": "(cd ./base-app && node layout.js)",
     "start": "npm-run-all -p startMessagePod startReceivePod startBaseApp"
   },
