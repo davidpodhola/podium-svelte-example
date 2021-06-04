@@ -18,6 +18,10 @@ const sveltereceivepod = layout.client.register({
   name: "svelteReceivePod", // required
   uri: "http://localhost:7101/manifest.json", // required
 });
+const layoutpod = layout.client.register({
+  name: "layoutPod", // required
+  uri: "http://localhost:7102/manifest.json", // required
+});
 
 app.use(layout.middleware());
 
@@ -29,17 +33,22 @@ app.get("/", async (req, res) => {
   const content = await Promise.all([
     sveltemessagepod.fetch(incoming),
     sveltereceivepod.fetch(incoming),
+    layoutpod.fetch(incoming),
   ]);
 
   //binding the podlet data to the layout
   incoming.podlets = content;
   incoming.view.title = "Home Page";
 
-  res.podiumSend(`<div>
+  const result = `<div>
+    ${content[2]}
     ${content[0]}
     ${content[1]}
   </div>
-  `);
+  `;
+
+
+  res.podiumSend(result);
 });
 
 

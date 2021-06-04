@@ -8,8 +8,9 @@
     "installAll": "(cd ./base-app && yarn) && (cd ./svelte-message-pod && yarn) && (cd ./svelte-receive-pod && yarn)",
     "startMessagePod": "(cd ./svelte-message-pod && yarn build && node podlet.js)",
     "startReceivePod": "(cd ./svelte-receive-pod && yarn build && node podlet.js)",
+    "startLayoutPod": "(cd ./snowpack-typescript && yarn build && node podlet.js)",
     "startBaseApp": "(cd ./base-app && node layout.js)",
-    "start": "npm-run-all -p startMessagePod startReceivePod startBaseApp"
+    "start": "npm-run-all -p startMessagePod startReceivePod startLayoutPod startBaseApp"
   },
   "repository": {
     "type": "git",
