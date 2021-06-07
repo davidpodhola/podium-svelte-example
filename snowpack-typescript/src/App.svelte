@@ -65,21 +65,14 @@
 								<TabContent {...props}>
 									<Row>
 										<Column md="{4}" lg="{7}">
-											<p>
-												Rapidly build beautiful and accessible experiences. The
-												Carbon kit contains all resources you need to get
-												started.
-											</p>
+											<div id="svelte-message2"></div>
 										</Column>
 									</Row>
 								</TabContent>
 								<TabContent {...props}>
 									<Row>
 										<Column md="{4}" lg="{7}">
-											<p>
-												Carbon provides styles and components in Vanilla, React,
-												Angular, Vue and Svelte for anyone building on the web.
-											</p>
+											<div id="svelte-receive2"></div>
 										</Column>
 									</Row>
 								</TabContent>

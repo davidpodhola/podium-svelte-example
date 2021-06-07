@@ -45,6 +45,26 @@ app.get("/", async (req, res) => {
     ${content[0]}
     ${content[1]}
   </div>
+  <script>
+    console.log('*** main app loaded');
+    
+    setTimeout( () => { 
+      var newParent = document.getElementById('svelte-message2');
+      var oldParent = document.getElementById('svelte-message');
+  
+      while (oldParent.childNodes.length > 0) {
+          newParent.appendChild(oldParent.childNodes[0]);
+      }
+      
+      newParent = document.getElementById('svelte-receive2');
+      oldParent = document.getElementById('svelte-receive');
+  
+      while (oldParent.childNodes.length > 0) {
+          newParent.appendChild(oldParent.childNodes[0]);
+      }
+    }, 1000);
+   
+  </script>
   `;
 
 
