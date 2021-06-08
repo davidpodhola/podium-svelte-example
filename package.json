@@ -9,7 +9,7 @@
     "startMessagePod": "(cd ./svelte-message-pod && yarn build && node podlet.js)",
     "startReceivePod": "(cd ./svelte-receive-pod && yarn build && node podlet.js)",
     "startLayoutPod": "(cd ./snowpack-typescript && yarn build && node podlet.js)",
-    "startBaseApp": "(cd ./base-app && node layout.js)",
+    "startBaseApp": "(cd ./base-app && yarn dev)",
     "start": "npm-run-all -p startMessagePod startReceivePod startLayoutPod startBaseApp"
   },
   "repository": {

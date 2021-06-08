@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
 
-const Layout = require("@podium/layout");
+const Index = require("@podium/layout");
 
 // registering the layout
-const layout = new Layout({
+const layout = new Index({
   name: "svelteLayout", // required
   pathname: "/", // required
 });
@@ -26,7 +26,7 @@ const layoutpod = layout.client.register({
 app.use(layout.middleware());
 
 // what should be returned when someone goes to the root URL
-app.get("/", async (req, res) => {
+app.get("/", async (req: any, res: any) => {
   const incoming = res.locals.podium;
 
   //fetching the podlet data
