@@ -48,22 +48,22 @@ app.get("/", async (req: any, res: any) => {
   <script>
     console.log('*** main app loaded');
     
-    setTimeout( () => { 
-      var newParent = document.getElementById('svelte-message2');
-      var oldParent = document.getElementById('svelte-message');
-  
-      while (oldParent.childNodes.length > 0) {
-          newParent.appendChild(oldParent.childNodes[0]);
-      }
+    const moveApplications = () => { 
+        const applications = [
+          { oldId: 'svelte-message', newId: 'svelte-message2' }  ,
+          { oldId: 'svelte-receive', newId: 'svelte-receive2' }
+        ];
+        for ( const {oldId, newId} of applications ) {
+          const newParent = document.getElementById(newId);
+          const oldParent = document.getElementById(oldId);
       
-      newParent = document.getElementById('svelte-receive2');
-      oldParent = document.getElementById('svelte-receive');
-  
-      while (oldParent.childNodes.length > 0) {
-          newParent.appendChild(oldParent.childNodes[0]);
-      }
-    }, 1000);
-   
+          while (oldParent.childNodes.length > 0) {
+              newParent.appendChild(oldParent.childNodes[0]);
+          }            
+        }
+    };
+    
+    document.addEventListener("DOMContentLoaded", moveApplications);
   </script>
   `;
 
